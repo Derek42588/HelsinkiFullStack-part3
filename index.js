@@ -3,7 +3,11 @@ const app = express()
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
+const cors = require('cors')
+
 app.use(bodyParser.json())
+
+app.use(cors())
 
 morgan.token ('bodyString', function getBody (req) {
     return JSON.stringify(req.body)
@@ -110,7 +114,7 @@ const unknownEndpoint = (req, res) => {
 
 app.use(unknownEndpoint)
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

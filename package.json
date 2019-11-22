@@ -9,7 +9,7 @@
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1",
     "build:ui": "rm -rf build && cd ../part2/phonebook && npm run build --prod && cp -r build ../../phonebookBackend",
     "deploy": "git push heroku master",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "author": "Derek Pyle",
@@ -20,7 +20,9 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.7.12",
     "morgan": "^1.9.1"
   }
 }

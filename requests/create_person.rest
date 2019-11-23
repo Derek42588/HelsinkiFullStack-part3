@@ -1,7 +1,7 @@
-post https://immense-springs-82877.herokuapp.com/api/persons
+post http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "scooby doober",
-    "number": "4"
+    "name": "new dude",
+    "number": "1"
 }
